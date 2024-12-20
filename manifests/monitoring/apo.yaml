@@ -1,7 +1,7 @@
 global:
-  clickhouseUrl: "10.26.1.146:9000"
-  clickhouseRootUsername: default
-  clickhouseRootPassword: "nn"
+  clickhouseUrl: "10.10.10.58:9000"
+  clickhouseRootUsername: "default"
+  clickhouseRootPassword: "password"
   clickhouseClusterName: ""
 
 apo-one-agent:
@@ -16,9 +16,9 @@ apo-one-agent:
     #   disabled: 不注入指定namespace下的服务,用于在instrument-all-namespace时忽略特定的Namespace
     instrumentor:
       targetNamespace:
-      - name: ts
+      - name: ts-dev
         value: enabledFuture
-
+    instrumentAllNamespace: false
 altinity-clickhouse-operator:
   enabled: false
 
