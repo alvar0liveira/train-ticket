@@ -1,6 +1,6 @@
 global:
   image:
-    repository: localhost:5000
+    repository: 10.10.10.240/library
     tag: latest
   port: 8080
   mysql:
@@ -167,13 +167,13 @@ services:
     name: ts-wait-order-service
     secretRef: ts-wait-order-service
 
-# resources:
-#   requests:
-#     cpu: 7
-#     memory: 59Gi
-#   limits:
-#     cpu: 7
-#     memory: 59Gi
+resources:
+  requests:
+    cpu: 2
+    memory: 2Gi
+  limits:
+    cpu: 4
+    memory: 4Gi
 
 skywalking-helm:
   oap:
